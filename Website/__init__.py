@@ -9,7 +9,7 @@ DB_NAME = "database.db"
 def create_app():
     app=Flask(__name__)
     app.config['SECRET_KEY'] = 'pIphvb0IDXOoPZO2XFLS'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://cviowhzivhgjeq:f3c7ef52185515b1af6b6b5c5ee7f99c8b9d166ca4416743b0512b2557c569aa@ec2-54-205-232-84.compute-1.amazonaws.com:5432/dbcnhlqqfu9jl7'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://cviowhzivhgjeq:f3c7ef52185515b1af6b6b5c5ee7f99c8b9d166ca4416743b0512b2557c569aa@ec2-54-205-232-84.compute-1.amazonaws.com:5432/dbcnhlqqfu9jl7'
     db.init_app(app)
 
     
