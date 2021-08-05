@@ -1,0 +1,347 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../static/public/css/tailwind.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tailwind.css') }}">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+     <!--Regular Datatables CSS-->
+	 <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+	 <!--Responsive Extension Datatables CSS-->
+	 <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
+  <link rel="icon" href="/static/public/images/Ghand-lrg.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
+
+<meta name="title" content="Give in Public">
+<meta name="description" content="Make the world a better place">
+   
+    <!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.giveinpublic.com/">
+<meta property="twitter:title" content="Give in Public">
+<meta property="twitter:description" content="Make the world a better place">
+<meta property="twitter:image:scr" content="https://www.giveinpublic.com/public/images/Graph.png">
+
+    <!-- Primary Meta Tags -->
+<title>
+    {%block head%} {% endblock %}
+</title>
+
+</head>
+
+<body style="background-color: #F9FAFB;"> 
+
+<!-- Main content -->
+<main class="flex-1 max-h-full  overflow-hidden  ">
+
+    <div
+      class="flex  flex-col mt-6 mb-6 p-5 items-center justify-center pb-6 space-y-4 border-b-4 border-custom-100 lg:items-center lg:space-y-0 lg:flex-row text-center"
+    >
+    <a href="https://www.giveinpublic.com/dashboard/configure" rel="noopener noreferrer" class="ml-4 mb-3 hidden md:block" style="position: absolute; left: 0;"> 
+        <img src="/static/public/images/gip.svg"  width="95px" alt="" >
+    </a>
+      <h1 class="text-5xl text-custom-300 font-semibold whitespace-nowrap text-center">{{user.first_name}}'s Dashboard</h1>
+      
+
+      
+  
+    </div>
+
+
+    
+
+
+    <div class="mt-4 p-5">
+        <div class="flex flex-wrap -mx-6">
+            <div class="w-full px-6 sm:w-1/2 xl:w-1/3">
+                <div class="flex items-center px-5 py-6 shadow-xl rounded-md bg-white">
+                    <div class="p-3 rounded-full bg-custom-100 bg-opacity-75">
+                        <svg class="h-8 w-8 text-white" viewBox="0 0 28 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.2 9.08889C18.2 11.5373 16.3196 13.5222 14 13.5222C11.6804 13.5222 9.79999 11.5373 9.79999 9.08889C9.79999 6.64043 11.6804 4.65556 14 4.65556C16.3196 4.65556 18.2 6.64043 18.2 9.08889Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M25.2 12.0444C25.2 13.6768 23.9464 15 22.4 15C20.8536 15 19.6 13.6768 19.6 12.0444C19.6 10.4121 20.8536 9.08889 22.4 9.08889C23.9464 9.08889 25.2 10.4121 25.2 12.0444Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M19.6 22.3889C19.6 19.1243 17.0927 16.4778 14 16.4778C10.9072 16.4778 8.39999 19.1243 8.39999 22.3889V26.8222H19.6V22.3889Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M8.39999 12.0444C8.39999 13.6768 7.14639 15 5.59999 15C4.05359 15 2.79999 13.6768 2.79999 12.0444C2.79999 10.4121 4.05359 9.08889 5.59999 9.08889C7.14639 9.08889 8.39999 10.4121 8.39999 12.0444Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M22.4 26.8222V22.3889C22.4 20.8312 22.0195 19.3671 21.351 18.0949C21.6863 18.0039 22.0378 17.9556 22.4 17.9556C24.7197 17.9556 26.6 19.9404 26.6 22.3889V26.8222H22.4Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M6.64896 18.0949C5.98058 19.3671 5.59999 20.8312 5.59999 22.3889V26.8222H1.39999V22.3889C1.39999 19.9404 3.2804 17.9556 5.59999 17.9556C5.96219 17.9556 6.31367 18.0039 6.64896 18.0949Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+
+                    <div class="mx-5">
+                        <h4 class="text-2xl font-semibold text-gray-700">${{total_donations}}</h4>
+                        <div class="text-gray-500">Lifetime Donations</div>
+                    </div>
+                </div>
+            </div>
+
+            {%for amount_other in donations_by_grp%}
+            <div class="w-full mt-6 px-6 sm:w-1/2 xl:w-1/3 sm:mt-0 mb-6">
+                <div class="flex items-center px-5 py-6 shadow-xl rounded-md bg-white">
+                    <div class="p-3 rounded-full bg-gray-900 bg-opacity-75">
+                
+                        
+                        <svg class="h-8 w-8" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill = "white">
+                   <g>
+                       <g>
+                           <path d="M47.054,302h-32c-8.291,0-15,6.709-15,15v180c0,8.291,6.709,15,15,15h32c24.814,0,45-20.186,45-45V347
+                               C92.054,322.186,71.869,302,47.054,302z"/>
+                       </g>
+                   </g>
+                   <g>
+                       <g>
+                           <path d="M507.554,331.099c-1.8-2.999-4.199-5.4-6.899-7.5c-11.045-9.662-29.654-8.749-40.499,3.001l-68.101,78.6l-2.1,2.399
+                               c-8.399,9.3-20.4,14.401-32.999,14.401h-116.4c-8.401,0-15-6.601-15-15c0-8.401,6.599-15,15-15h91.5c16.5,0,30-13.5,30-30v-0.3
+                               c-0.3-16.5-13.5-29.7-30-29.7h-54.3c-8.996,0-18.636-3.303-26.4-9.901c-36.599-32.1-90-34.2-129.3-6.899v184.499
+                               c29.7,8.101,60.3,12.301,91.199,12.301h133.801c32.999,0,64.2-15.601,84-42.001l72.001-96
+                               C513.56,360.21,514.352,341.3,507.554,331.099z"/>
+                       </g>
+                   </g>
+                   <g>
+                       <g>
+                           <path d="M402.264,28.995C385.627,10.297,362.564,0,337.324,0c-28.172,0-52.593,13.321-70.622,38.522
+                               c-1.352,1.889-2.617,3.779-3.802,5.649c-1.184-1.871-2.449-3.76-3.801-5.649C241.07,13.321,216.649,0,188.477,0
+                               c-25.24,0-48.303,10.297-64.939,28.994C107.75,46.738,99.054,70.459,99.054,95.788c0,27.525,10.681,52.924,33.611,79.934
+                               c20.009,23.565,48.708,47.788,81.938,75.836c12.28,10.365,24.979,21.083,38.473,32.778c2.819,2.443,6.321,3.665,9.824,3.665
+                               c3.502,0,7.005-1.222,9.824-3.665c13.492-11.693,26.189-22.41,38.469-32.773c21.342-18.014,39.773-33.57,55.767-48.66
+                               c31.053-29.298,59.787-62.553,59.787-107.114C426.747,70.46,418.052,46.739,402.264,28.995z"/>
+                       </g>
+                   </g>
+                   </svg>
+                    </div>
+
+                    <div class="mx-5">
+                        <h4 class="text-2xl font-semibold text-gray-700">$ {{amount_other[0]}}</h4>
+                        <div class="text-gray-500">{{amount_other[1]}}</div>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+
+            
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Graphs -->
+    <div
+      class="flex  flex-col  mb-6 p-5 items-center justify-center pb-6 space-y-4 border-b border-custom-100 lg:items-center 
+      lg:space-y-0 lg:flex-row text-center">
+      <h1 class="text-4xl text-custom-300 font-medium whitespace-nowrap text-center">Donation Insights</h1>
+    </div> 
+
+    <div class="mt-4 p-5"> 
+    <div class="flex mb-4">
+        <div class="w-1/2 bg-white px-6 shadow-xl rounded-md bg-white mr-2 p-5">
+            <canvas id="line-chart"></canvas>
+        </div>
+        <div class="w-1/2 bg-white px-6 shadow-xl rounded-md bg-white ml-2 p-5">
+            <canvas id="doughnut-chart" ></canvas>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<script> 
+
+//Create the Line Chart
+
+    
+
+    new Chart(document.getElementById("line-chart"), {
+    type: 'line',
+    data: {
+        labels: JSON.parse({{dates_labels | tojson}}),
+        datasets: [{ 
+            data: JSON.parse({{over_time_donations | tojson}}),
+            label: "Your Total Donations",
+            borderColor: "#1FAD66",
+            backgroundColor:"#1FAD66",
+            fill: false
+        }
+        ]
+    },
+    options: {
+        scales: {
+            y: {
+                ticks: {
+                    // Include a dollar sign in the ticks
+                    callback: function(value, index, values) {
+                        return '$' + value;
+                    }
+                }
+            }
+        },
+        title: {
+        display: true,
+        responsive: true,
+        maintainAspectRatio: false,
+        text: 'Donations over Time', 
+        
+        }
+    }
+    });
+
+//Create the Doughnut Chart
+    var ctx1 = document.getElementById("doughnut-chart")
+
+    //doughnut chart data
+  var data1 = {
+    labels: JSON.parse({{groups_donations | tojson}}),
+    datasets: [
+      {
+        label: "Donations by Group",
+        data: JSON.parse({{amount_by_grp | tojson}}),
+        backgroundColor: [
+          "#3b4a3f",
+          "#9db0a3",
+          "#00a9f4",
+          "#0075bb",
+          "#1d1d35",
+          "#deb887",
+          "#003400",
+          "#887718",
+          "#d98317",
+          "#ff5c51",
+          "#002000"
+
+
+
+
+        ],
+        borderColor: [
+          "#3b4a3f",
+          "#9db0a3",
+          "#00a9f4",
+          "#0075bb",
+          "#1d1d35",
+          "#deb887",
+          "#003400",
+          "#887718",
+          "#d98317",
+          "#ff5c51",
+          "#002000"
+        ],
+        borderWidth: [1, 1, 1, 1, 1]
+      }
+    ]
+  };
+
+    //options
+    var options = {
+    
+    maintainAspectRatio: false,
+    title: {
+        display: true,
+        position: "top",
+        text: "Your Donations by Organisation",
+        fontSize: 18,
+        fontColor: "#111"
+    },
+    legend: {
+        display: true,
+        position: "bottom",
+        labels: {
+        fontColor: "#333",
+        fontSize: 16
+        }
+    }
+    };
+
+    //create Chart class object
+  var chart1 = new Chart(ctx1, {
+    type: "doughnut",
+    data: data1,
+    options: options
+  });
+
+
+
+    
+
+
+    </script>
+
+
+<div
+class="flex  flex-col mt-6 mb-6 p-5 items-center justify-center pb-6 space-y-4 border-b border-custom-100 lg:items-center lg:space-y-0 lg:flex-row text-center"
+>
+<h1 class="text-4xl text-custom-300 font-medium whitespace-nowrap text-center">Leaderboard</h1>
+
+</div>
+    <!--Table-->
+    <div class="flex flex-col mt-6 p-5 mb-6">
+      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+          <div class="overflow-hidden border-b border-gray-200 rounded-md shadow-xl">
+            <table class="min-w-full overflow-x-scroll divide-y divide-gray-200 w-full table-auto">
+              <thead class="bg-gray-50">
+                <tr>
+                    <th
+                    scope="col"
+                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
+                  >
+                    Position
+                  </th>
+
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
+                  >
+                    Name
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
+                  >
+                    Amount
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
+                  >
+                    Link to Dashboard
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                {%for sum in sum_donations%}
+                  <tr class="transition-all hover:bg-gray-100 hover:shadow-lg">
+                    
+                        <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">{{sum_donations.index(sum)+1}}</td>
+                        <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"> {{sum[0]}}</td>
+                        <td class="px-6 py-4 text-sm text-gray-500  break-words"> ${{sum[2]}}</td>
+                        <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap"><a href= "https://www.giveinpublic.com/dashboard/public/{{sum[1]}}" class="text-indigo-600 hover:text-indigo-900" > Dashboard </a></td>
+                        {%endfor%} 
+                    </div>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

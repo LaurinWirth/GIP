@@ -1,0 +1,336 @@
+{% extends 'base.html'%} 
+
+{% block head%} 
+Give in Public
+{%endblock%}
+
+{% block body%} 
+  <!--Above the fold-->
+    <div class="lg:pb-48 darken" id="Home" style="background-image: url(../static/public/images/tea.jpg); background-size: cover; background-position: top;">
+      <div>
+      
+        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-48">
+          <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <div>
+              <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-custom-100 ">
+                Beta
+              </p>
+            </div>
+            <div> 
+            <h2  class="max-w-lg mb-6 font-sans text-4xl font-bold leading-none 
+            tracking-tight text-white sm:text-5xl md:mx-auto hidden md:block">
+
+
+              <p class="lg:py-4 py-4"> 
+              <span style="background-color: rgba(0, 0, 0, 0.8);">
+              Donate to effective </span>
+              </p>
+              <p> 
+              <span class="" style="background-color: rgba(0, 0, 0, 0.8);"> 
+              charities, transparently
+            </span> </p>
+            </h2>
+            <!--Mobile hero-->  
+            <h2  class="max-w-lg mb-6 font-sans text-4xl font-bold leading-none 
+            tracking-tight text-white sm:text-5xl md:mx-auto md:hidden">
+            <p class="lg:py-4 py-2"> 
+              <span style="background-color: rgba(0, 0, 0, 0.8);">
+              Donate to  </span>
+              </p>
+
+            <p class="py-2"> 
+              <span class="" style="background-color: rgba(0, 0, 0, 0.8);"> 
+                effective charities, 
+            </span> </p>
+
+            <p class="lg:py-4 py-2"> 
+              <span class="" style="background-color: rgba(0, 0, 0, 0.8);"> 
+               transparently
+            </span> </p>
+
+            
+              
+              
+            </h2>
+
+
+            <p class="text-base text-white md:text-2xl" style="background-color: rgba(0, 0, 0, 0.8);" >
+             <span>  
+               Track your impact and inspire others through your actions </span>
+              
+            </p>
+            </div>
+          </div>
+          <div class="flex items-center sm:justify-center">
+            <button
+              type="submit"
+              class="text-xl font-bold inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition 
+              duration-200 rounded shadow-md bg-custom-100 hover:bg-custom-300 focus:shadow-outline focus:outline-none"
+            ><a href="/signup"> 
+              Sign-up
+            </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+     
+<!--How it works-->
+<div style="background-color: #222222;" id="How"> 
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 " style="background-color: #222222;">
+  <div class="max-w-xl mb-10 md:mx-auto md:text-center sm:text-center lg:max-w-2xl md:mb-12">
+    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+
+      How it works
+    </h2>
+    <p class="text-base text-white md:text-lg">
+      Put your donations on autopilot and organize them in a beautiful dashboard you can share publicly.
+    </p>
+  </div>
+  <div class="relative grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-2 sm:grid-cols-1">
+    <div class="absolute inset-0 flex items-center justify-center sm:hidden lg:flex">
+      
+    </div>
+    <div class="p-5 duration-300 transform bg-white border rounded shadow-sm ">
+      <div class="flex items-center justify-between mb-2">
+        <p class="text-lg font-bold leading-5">Pick a plan</p>
+        <p class="flex items-center justify-center w-6 h-6 font-bold rounded text-custom-500 bg-indigo-50 ">
+          1
+        </p>
+      </div>
+      <p class="text-sm text-gray-900">
+        Choose from our recommended monthly plans or create your custom plan.
+
+      </p> <br>
+      <img src="../static/public/images/Plan.png">
+    </div>
+    <div class="p-5 duration-300 transform bg-white border rounded shadow-sm ">
+      <div class="flex items-center justify-between mb-2">
+        <p class="text-lg font-bold leading-5">Pick your cause areas </p>
+        <p class="flex items-center justify-center w-6 h-6 font-bold rounded text-custom-500 bg-indigo-50">
+          2
+        </p>
+      </div>
+      <p class="text-sm text-gray-900">
+        Decide how you want your donation to be allocated among up to three cause areas.
+      </p><br>
+      <img src="../static/public/images/ImpactAreas.png">s
+    </div>
+    <div class="p-5 duration-300 transform bg-white border rounded shadow-sm ">
+      <div class="flex items-center justify-between mb-2">
+        <p class="text-lg font-bold leading-5">Manage your impact</p>
+        <p class="flex items-center justify-center w-6 h-6 font-bold rounded text-custom-500 bg-indigo-50">
+          3
+        </p>
+      </div>
+      <p class="text-sm text-gray-900">
+        View your unique dashboard and track the impact your donations have made.
+      </p> <br>
+      <img src="../static/public/images/Graph.png">
+    </div>
+    <div class="p-5 duration-300 transform bg-white border rounded shadow-sm">
+      <div class="flex items-center justify-between mb-2">
+        <p class="text-lg font-bold leading-5">Inspire others</p>
+        <p class="flex items-center justify-center w-6 h-6 font-bold rounded text-custom-500 bg-indigo-50">
+          4
+        </p>
+      </div>
+      <p class="text-sm text-gray-900">
+        Inspire others by embedding your personal dashboard on your website and by sharing it on social media.
+      </p> <br>
+      <img src="../static/public/images/share_white.png">
+    </div>
+  </div>
+</div>
+</div>
+
+<!--About?-->
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20" id="About">
+  <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+      <span class="relative inline-block">
+        <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+          <defs>
+            <pattern id="db164e35-2a0e-4c0f-ab05-f14edc6d4d30" x="0" y="0" width=".135" height=".30">
+              <circle cx="1" cy="1" r=".7"></circle>
+            </pattern>
+          </defs>
+          <rect fill="url(#db164e35-2a0e-4c0f-ab05-f14edc6d4d30)" width="52" height="24"></rect>
+        </svg>
+        <span class="relative">About</span>
+      </span>
+     
+    </h2>
+    <p class="text-base text-gray-700 md:text-lg">
+      Our mission is to make giving something to be proud of. We give you the tools to share your impact and inspire action in others.
+    </p>
+  </div>
+  <div class="grid max-w-sm gap-5 mb-8 lg:grid-cols-3 sm:mx-auto lg:max-w-full">
+    <div class="px-10 py-20 text-center border rounded lg:px-5 lg:py-10 xl:py-20">
+      <p class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+        02 July 2021
+      </p>
+      <a href="Vision.html" class="inline-block max-w-xs mx-auto mb-3 text-2xl font-extrabold leading-7 transition-colors duration-200 hover:text-custom-300" 
+      aria-label="Read article" title="Why give in public?">
+      The vision behind 'Give in Public'
+      </a>
+      <p class="max-w-xs mx-auto mb-2 text-gray-700">
+       Find out more about the mission and the principles of 'Give in Public' and how it can multiply the impact you have.
+      </p>
+      <a href="Vision.html" aria-label="Vision"
+       class="inline-flex items-center font-semibold transition-colors 
+       duration-200 text-custom-100 hover:text-custom-300">Read more</a>
+    </div>
+    
+    <div class="px-10 py-20 text-center border rounded lg:px-5 lg:py-10 xl:py-20">
+      <p class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+      &nbsp;
+      </p>
+      <a href="https://join.slack.com/t/slack-egf4696/shared_invite/zt-si1cb2xx-ad36KRy_4DByB1woE0OcNA" target="_blank" rel="noopener noreferrer" class="inline-block max-w-xs mx-auto mb-3 text-2xl font-extrabold leading-7 transition-colors duration-200 hover:text-custom-300" 
+      aria-label="Read article" title="Join the community">
+        Join our Slack community and help us create 'Give in Public' by providing early feedback.
+      </a>
+      <div class="flex items-center justify-center ">
+        <button
+          type="submit"
+          class="text-xl font-bold inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition 
+          duration-200 rounded shadow-md bg-custom-100 hover:bg-custom-300 focus:shadow-outline focus:outline-none"
+        ><a href="https://join.slack.com/t/slack-egf4696/shared_invite/zt-si1cb2xx-ad36KRy_4DByB1woE0OcNA" 
+        target="_blank" rel="noopener noreferrer" class="item-center "> 
+          Join Slack
+        </a>
+        </button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<!--FAQ-->
+<div style="background-color: #222222;" class="text-white" id="FAQ"> 
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-16" id="faq">
+    <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+  
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight  sm:text-4xl md:mx-auto">
+         
+          FAQ
+        </h2>
+  
+      </div>
+    </div>
+    <div class="max-w-screen-xl sm:mx-auto">
+      <div class="grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-2">
+        <div class="space-y-8">
+          <div>
+            <p class="mb-2 text-xl  font-bold">
+              Are you already operating? 
+            </p>
+            <p>
+              No, we are just starting this up. To make this a success and build a great platform, we would love your input. 
+              Please get in touch and join our Slack group or just fill out the questionnaire to show your support. 
+              It’s important to get to a critical mass of people so we know that we should go and fully build this.
+            </p>
+          </div>
+          <div>
+            <p class="mb-2 text-xl font-bold">
+              Where will my money go?
+            </p>
+            <p >
+              97% of your money will go to charities that support your cause areas in the an effective way. The remaining 3% go to Stripe as a processing fee. 
+              This will change as soon as 'Give in Public' is registered as an official charity. To make that happen, we need your support. Help us start the 'Give in Public' movement.
+            </p>
+          </div>
+        </div>
+  
+        <div class="space-y-8">
+          <div>
+            <p class="mb-2 text-xl font-bold">How do you curate effective charities? </p>
+            <p >
+              There are multiple meta organizations that assess the effectiveness of charities including 
+              <a href="https://www.givewell.org/" target="_blank" class="text-blue-700"
+                rel="noopener noreferrer">givewell.org</a> or
+                 <a href="https://founderspledge.com/" target="_blank" class="text-blue-700"
+                rel="noopener noreferrer">founderspledge.com</a>. We will use their recommendations as a reference.
+            </p>
+          </div>
+          <div>
+            <p class="mb-2 text-xl font-bold">
+              How can I verify my donations? 
+            </p>
+            <p>
+              We will provide you with a receipt for each donation that we make on your behalf. 
+              You can use this to verify the legitimacy and to deduct it from your tax. 
+            </p>
+          </div>
+
+  
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+<!--Who am I?-->
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20" id="about">
+  <div class="grid gap-10 lg:grid-cols-2">
+    <div class="lg:pr-10">
+
+      <h5 class="mb-4 text-4xl font-extrabold leading-none">
+        Who is behind 'Give in Public'?
+        
+      </h5>
+      <p class="text-base text-justify align-baseline text-gray-/00 md:text-xl">
+        Hi, I am Laurin. After working for a tech company for the past years, I decided to take 12 months off to work on my
+        own ideas. During these 12 months, I want to work on projects that contribute to a more equitable world.
+         I believe that one way to achieve this goal is to better leverage technology in the non-profit sector.
+         With ‘Give in Public’ the goal is to normalize
+          giving and to multiply the impact everyone can have by making it public. </p>
+          <br> 
+          <p class="text-base text-justify align-baseline text-gray-/00 md:text-xl">
+            If you have some ideas or just want to connect, get in touch with me via 
+               <a href="https://twitter.com/Laurin_Wirth" target="_blank" class="text-blue-700"
+                rel="noopener noreferrer">Twitter </a>or <a href="mailto: laurin.wirth@posteo.net" class="text-blue-700">Email. 
+           </a> Please also sign-up so I get a better understanding of what I need to build.
+          </p>
+        
+
+
+    </div>
+    <div>
+      <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96" src="../static/public/images/LW5.png" alt="" />
+    </div>
+  </div>
+</div>
+
+
+<hr>
+
+
+  
+  <!--Footer-->
+  <div class="bg-white py-4"> 
+  <div class="flex items-center justify-center  items-center space-x-4 bg-white">
+        <a href="https://twitter.com/Laurin_Wirth" target="_blank" rel="noopener noreferrer" class="text-gray-600 transition-colors duration-300 hover:text-custom-300">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+            <path
+              d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,
+              0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,
+              4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,
+              2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"
+            ></path>
+          </svg>
+        </a>
+
+        <a href="mailto: laurin.wirth@posteo.net" class="text-gray-600 transition-colors duration-300 hover:text-custom-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+</div>
+</div>
+
+
+{%endblock%}

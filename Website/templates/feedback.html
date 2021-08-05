@@ -1,0 +1,68 @@
+{%extends 'base-dashboard.html'%}
+{%block head%} Manage Plan {% endblock %}
+
+
+{%block body%} 
+<!-- Main content -->
+<main class="flex-1 max-h-full p-5 overflow-hidden overflow-y-scroll" style="background-color: #F9FAFB;">
+
+    <!-- Main content header -->
+    <div
+      class="flex flex-col items-start justify-between pb-6 space-y-4 border-b lg:items-center lg:space-y-0 lg:flex-row text-center"
+    >
+      <h1 class="text-2xl font-semibold whitespace-nowrap text-center">Your Donations</h1>
+    </div>
+
+    <div class="mt-4 p-5"> 
+        <div class="flex mb-4">
+            <div class="w-full bg-white px-6 shadow-xl  bg-white mr-2 p-5">
+                <h2 class="text-2xl"> <h2 class="font-bold -mb-4">Goal:</h2><br>
+                Give in Public aims to increase giving by making the process easy, visual and rewarding. 
+                We need your help to build out the functionality to achieve this vision. Please give us feedback through one of the channels below or reach out if 
+                you want to collaborate.  
+                       </h2> <br> <br>
+                
+                <div class="flex flex-col bg-center bg-cover bg-no-repeat">
+                        <div class="grid mx-auto sm:my-auto bg-white rounded-3xl ">
+                <div class="flex items-center justify-center space-x-3">
+
+                    <a href="https://join.slack.com/t/slack-egf4696/shared_invite/zt-si1cb2xx-ad36KRy_4DByB1woE0OcNA" target="_blank" rel="noopener noreferrer">
+                    <button class="px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded" style="background-color: #4A124C;">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slack"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"></path><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"></path><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"></path><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"></path><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"></path><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"></path><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"></path></svg>
+                    <span>Slack</span>
+                </button>
+                    </a>
+
+                    <a href="https://twitter.com/Laurin_Wirth" target="_blank" 
+                rel="noopener noreferrer">
+            
+           
+                <button class="bg-blue-300 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                    <svg class="w-5 h-5 fill-current" width="24" height="24" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                    <span>Twitter</span>
+                </button>
+                </a>
+
+                <a href="mailto: laurin.wirth@posteo.net" > 
+                <button class="bg-custom-100 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>Email</span>
+                </button>
+            </a>
+                </div>
+                        </div>
+                    </div>
+
+            
+            <img src="/static/public/images/GIP Roadmap.png" class="mt-12">
+
+        </div>
+    </div>
+
+
+    
+ </main>
+
+
+{%endblock%}
