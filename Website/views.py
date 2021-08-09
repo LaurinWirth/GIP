@@ -116,14 +116,15 @@ def publicdashboard(id):
     )
 
     sum_donations = (
-        db.session.query(
-            User.first_name, Donation.user_id, func.sum(Donation.amount).label("Total")
-        )
-        .join(User, Donation.user_id == User.id)
-        .group_by(Donation.user_id)
-        .order_by(desc(text("Total")))
-        .all()
+    db.session.query(
+        User.first_name, Donation.user_id, func.sum(Donation.amount)
     )
+    .join(User, Donation.user_id == User.id)
+    .group_by(Donation.user_id, User.first_name)
+    .order_by(desc(func.sum(Donation.amount)))
+    .all()
+)
+
 
     groups_donations = []
     amount_by_grp = []
