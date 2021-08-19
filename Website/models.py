@@ -2,6 +2,7 @@ from . import db
 from flask_login import UserMixin
 from sqlalchemy.sql import func
 from datetime import datetime, timezone
+from sqlalchemy import text
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
@@ -19,6 +20,9 @@ class Donation(db.Model):
     amount = db.Column(db.Integer)
     description = db.Column(db.String)
     organisation = db.Column(db.String(250))
+    currency = db.Column (db.String(100))
     date_donated = db.Column(db.Date)
     date_created = db.Column(db.DateTime(timezone=True), default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+     

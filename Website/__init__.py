@@ -2,14 +2,17 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from os import path
 from flask_login import LoginManager, login_manager
+from flask_migrate import Migrate
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
+
 
 def create_app():    
     # 'sqlite:///database.db'
 
     app=Flask(__name__)
+    migrate= Migrate(app, db)
     app.config['SECRET_KEY'] = 'pIphvb0IDXOoPZO2XFLS'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://cviowhzivhgjeq:f3c7ef52185515b1af6b6b5c5ee7f99c8b9d166ca4416743b0512b2557c569aa@ec2-54-205-232-84.compute-1.amazonaws.com:5432/dbcnhlqqfu9jl7'
     db.init_app(app)
@@ -40,3 +43,4 @@ def create_database(app):
     if not path.exists('website/' + DB_NAME):
         db.create_all(app=app)
         print('Created Database!')
+
