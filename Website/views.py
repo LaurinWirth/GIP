@@ -165,7 +165,7 @@ def publicdashboard(id):
     df['ConvertedAmount'] =df.apply(convert, axis=1)
     summaryTable = df.groupby(['Name', 'Id'])['ConvertedAmount'].sum().to_frame('SummedAmount').reset_index().sort_values(by='SummedAmount', ascending=False)
     
-    print(summaryTable)
+   
 
     groups_donations = []
     amount_by_grp = []
